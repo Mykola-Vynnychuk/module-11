@@ -1,0 +1,53 @@
+.footer {
+  padding: 10px 0px 11px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $main-font;
+  border-top: 1px solid #e5e5e5;
+
+  &__container {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    color: rgb(243, 129, 129);
+  }
+}
+
+.form-subscribe {
+  display: flex;
+
+  &__input {
+    height: 40px;
+    width: 230px;
+    outline: none;
+    text-transform: lowercase;
+    border: 1px solid #e7e7e7;
+    padding: 0px 12px 0px 12px;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: initial;
+      font-family: $secondary-font;
+      font-style: italic;
+      color: rgb(204, 204, 204);
+    }
+  }
+
+  &__button {
+    display: block;
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $main-font;
+    color: rgb(255, 255, 255);
+    background-color: #95e1d3;
+    border: none;
+  }
+}

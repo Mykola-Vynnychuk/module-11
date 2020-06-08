@@ -1,0 +1,144 @@
+.header {
+  color: $lite-color;
+  background-image: linear-gradient(
+      rgba(243, 129, 129, 0.9),
+      rgba(252, 227, 138, 0.9)
+    ),
+    url(../img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 230px;
+
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        rgba(243, 129, 129, 0.9),
+        rgba(252, 227, 138, 0.9)
+      ),
+      url(../img/background@2x.jpg);
+  }
+
+  &__navigation {
+    margin-bottom: 135px;
+  }
+
+  &__title {
+    font-size: 150px;
+    font-weight: 700;
+    color: $lite-color;
+    text-transform: uppercase;
+    width: 820px;
+    line-height: 0.946em;
+    text-align: center;
+    margin: 0 auto 108px;
+    letter-spacing: -4.5px;
+  }
+
+  &__text-decoration {
+    font-size: 72px;
+    margin-bottom: 4px;
+    letter-spacing: 0px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logotype {
+  font-size: 30px;
+  font-weight: 700;
+  color: $lite-color;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 642px;
+
+  &__icon {
+    fill: $lite-color;
+    width: 18px;
+    height: 18px;
+    transition: all 0.3s linear;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: $lite-color;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:focus {
+      color: rgb(252, 227, 138);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &_basket {
+      fill: $lite-color;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 26px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: rgb(252, 227, 138);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease-out;
+    }
+
+    &_icon:hover .main-menu__icon,
+    &_icon:focus .main-menu__icon {
+      fill: rgba(252, 227, 138, 1);
+    }
+  }
+}
+
+.search-btn {
+  border: none;
+  background-color: transparent;
+  color: $lite-color;
+  outline: none;
+  cursor: pointer;
+}
+
+.text-decoration {
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.link-more {
+  display: block;
+  height: 40px;
+  width: 160px;
+  border: 3px solid $lite-color;
+  font-family: $main-font, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $lite-color;
+  padding-top: 10px;
+  margin: 0 auto;
+}
